@@ -17,17 +17,15 @@
       <div class="col-xs-12">
         <div class="box box-primary">
           <div class="box-header">
-            <a href="index.php?page=tambah_penjualan" class="btn btn-primary" role="button" title="Tambah Data"><i class="glyphicon glyphicon-plus"></i> Tambah</a>
           </div>
           <div class="box-body table-responsive">
             <table id="penjualan" class="table table-bordered table-hover">
               <thead>
                 <tr>
-                  <th>#</th>
+                  <th>NO</th>
                   <th>KASIR</th>
                   <th>TOTAL</th>
                   <th>TANGGAL</th>
-                  <th>AKSI</th>
                 </tr>
               </thead>
               <tbody>
@@ -44,10 +42,6 @@
                     <td><?php echo $row['nama']; ?></td>
                     <td><?php echo $row['total']; ?></td>
                     <td><?php echo $row['tanggal']; ?></td>
-                    <td>
-                      <a href="index.php?page=ubah_penjualan&id=<?= $row['id_penjualan']; ?>" class="btn btn-success" role="button" title="Ubah Data"><i class="glyphicon glyphicon-edit"></i></a>
-                      <a href="javascript:void(0);" class="btn btn-danger" role="button" title="Hapus Data" onclick="hapusPenjualan(<?= $row['id_penjualan']; ?>);"><i class="glyphicon glyphicon-trash"></i></a>
-                    </td>
                   </tr>
                 <?php } ?>
               </tbody>
